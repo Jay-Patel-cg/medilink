@@ -5,6 +5,7 @@ import App from './App';
 import './index.css';
 import { AuthProvider } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
+import { NotificationProvider } from './context/NotificationContext';
 
 const rootElement = document.getElementById('root');
 
@@ -14,7 +15,9 @@ if (rootElement) {
       <BrowserRouter>
         <AuthProvider>
           <ThemeProvider>
-            <App />
+            <NotificationProvider>
+              <App />
+            </NotificationProvider>
           </ThemeProvider>
         </AuthProvider>
       </BrowserRouter>
